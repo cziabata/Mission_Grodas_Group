@@ -1,0 +1,139 @@
+body {
+  font-family: Muli;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  align-items: center;
+}
+
+.nav-menu__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu__link {
+  margin-left: 35px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #37474F;
+  transition: 0.3s;
+}
+.nav-menu__link:hover {
+  color: #39A9CD;
+}
+
+.btn {
+  font-family: "Open Sans";
+  background-color: #39A9CD;
+  color: #fff;
+  transition: 0.2s;
+}
+.btn:hover {
+  box-shadow: 0 1px 1px 1px #37474F;
+}
+
+.header-btn {
+  margin: 0 40px;
+  padding: 9px 25px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.nav-menu__burger {
+  display: none;
+}
+
+/*==============================overlay styles==============================*/
+.header__overlay {
+  visibility: hidden;
+  position: absolute;
+  padding-bottom: 10px;
+  border-radius: 1px;
+  top: 60px;
+  width: 100%;
+  background: linear-gradient(45deg, #1e3649 0%, rgba(30, 54, 73, 0.01) 0%, #39a9cd 100%);
+}
+
+.overlay-btn {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+.overlay-item {
+  margin-top: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.show {
+  visibility: visible;
+}
+
+/*==============================@media request==============================*/
+@media (max-width: 1200px) {
+  .nav-menu__link {
+    margin-left: 20px;
+    font-size: 15px;
+  }
+
+  .header-btn {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 992px) {
+  .header__nav-menu {
+    display: none;
+  }
+
+  .nav-menu__burger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 20px;
+    right: 5%;
+    cursor: pointer;
+  }
+
+  .nav-menu__burger span {
+    top: 8px;
+  }
+
+  .nav-menu__burger span,
+.nav-menu__burger::before,
+.nav-menu__burger::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background-color: #39A9CD;
+    border-radius: 5px;
+  }
+
+  .nav-menu__burger::before {
+    top: 0;
+  }
+
+  .nav-menu__burger::after {
+    bottom: 0;
+  }
+}
