@@ -1,0 +1,145 @@
+.intro__buttons {
+    padding-top: 145px;
+    padding-bottom: 122px;
+    &-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.intro__button {
+    padding: 29px 0;
+    border-radius: 100px;
+    span {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 48px;
+    }
+    &-first {
+        padding-left: 33px;
+        span {
+            padding-left: 84px;
+            padding-right: 117px;
+            background: url(../img/icons/srart-in-it-button-icon.svg) left no-repeat;
+        }
+    }
+    &-second {
+        padding-left: 26px;
+        span {
+            padding-left: 84px;
+            padding-right: 84px;
+            background: url(../img/icons/i-have-experience-button-icon.svg) left no-repeat;
+        }
+    }
+    &-third {
+        padding-left: 39px;
+        span {
+            padding-left: 91px;
+            padding-right: 92px;
+            background: url(../img/icons/open-vacancies-button-icon.svg) left no-repeat;
+        }
+    }
+}
+
+/*==============================@media request==============================*/
+
+@media (max-width: 1200px) {
+    .intro__button {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        &-first {
+            padding-left: 23px;
+            span {
+                padding-left: 74px;
+                padding-right: 107px;
+            }
+        }
+        &-second {
+            padding-left: 16px;
+            span {
+                padding-left: 74px;
+                padding-right: 74px;   
+            }
+        }
+        &-third {
+            padding-left: 29px;
+            span {
+                padding-left: 81px;
+                padding-right: 82px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .intro__button {
+        span {
+            font-size: 14px;
+        }
+        &-first {
+            padding-left: 23px;
+            span {
+                padding-left: 64px;
+                padding-right: 77px;
+            }
+        }
+        &-second {
+            padding-left: 16px;
+            span {
+                padding-left: 64px;
+                padding-right: 44px;   
+            }
+        }
+        &-third {
+            padding-left: 19px;
+            span {
+                padding-left: 71px;
+                padding-right: 52px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .intro__button {
+        span {
+            font-size: 12px;
+        }
+        &-first {
+            padding-left: 23px;
+            span {
+                padding-left: 54px;
+                padding-right: 42px;
+            }
+        }
+        &-second {
+            padding-left: 16px;
+            span {
+                padding-left: 44px;
+                padding-right: 9px;   
+            }
+        }
+        &-third {
+            padding-left: 19px;
+            span {
+                padding-left: 51px;
+                padding-right: 17px;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .intro__buttons {
+        padding-top: 45px;
+        padding-bottom: 22px;
+        &-wrapper {
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    .intro__button {
+        display: inline-block;
+        width: 90%;
+        margin: 15px;
+        text-align: center;
+    }
+}

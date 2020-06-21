@@ -15,18 +15,37 @@ body {
   align-items: center;
 }
 
-.nav-menu__link {
+.nav-menu__item {
   margin-left: 35px;
+}
+
+.nav-menu__link {
+  position: relative;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: #37474F;
+  transition: 0.1s;
+}
+.nav-menu__link:after {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  bottom: -5px;
+  background-color: #39A9CD;
+  height: 2px;
+  transform: scale(0);
   transition: 0.3s;
 }
 .nav-menu__link:hover {
   color: #39A9CD;
+}
+.nav-menu__link:hover:after {
+  transform: scale(1);
 }
 
 .btn {
@@ -36,11 +55,11 @@ body {
   transition: 0.2s;
 }
 .btn:hover {
-  box-shadow: 0 1px 1px 1px #37474F;
+  background-color: #37474F;
 }
 
 .header-btn {
-  margin: 0 40px;
+  margin: 0 30px;
   padding: 9px 25px;
   font-style: normal;
   font-weight: 800;
@@ -57,12 +76,15 @@ body {
 /*==============================overlay styles==============================*/
 .header__overlay {
   visibility: hidden;
+  display: block;
   position: absolute;
   padding-bottom: 10px;
   border-radius: 1px;
   top: 60px;
   width: 100%;
-  background: linear-gradient(45deg, #1e3649 0%, rgba(30, 54, 73, 0.01) 0%, #39a9cd 100%);
+  background: linear-gradient(45deg, white 19%, #39a9cd 95%, #39a9cd 100%);
+  z-index: 55;
+  transition: 0.1s;
 }
 
 .overlay-btn {
@@ -89,14 +111,17 @@ body {
 
 /*==============================@media request==============================*/
 @media (max-width: 1200px) {
+  .nav-menu__item {
+    margin-left: 15px;
+  }
+
   .nav-menu__link {
-    margin-left: 20px;
     font-size: 15px;
   }
 
   .header-btn {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 12px;
   }
 }
@@ -135,5 +160,223 @@ body {
 
   .nav-menu__burger::after {
     bottom: 0;
+  }
+}
+.main__intro {
+  background: url(../img/background-city.jpg) center center no-repeat;
+  z-index: 1;
+  position: relative;
+  font-family: Muli;
+  color: #fff;
+  padding-top: 235px;
+}
+.main__intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 54, 73, 0.9);
+  z-index: -1;
+}
+.main__intro-title {
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 108px;
+  text-align: center;
+  color: #fff;
+}
+.main__intro-subtitle {
+  margin-top: 45px;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 188px;
+}
+.main__intro-btn {
+  margin-bottom: 120px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 18px 45px;
+  border-radius: 20px;
+}
+.main__intro-wrapper {
+  background: url(../img/icons/background-city-icon-layer.svg) bottom no-repeat;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/*==============================@media request==============================*/
+@media (max-width: 992px) {
+  .main__intro-title {
+    font-size: 86px;
+    line-height: 98px;
+  }
+
+  .main__intro-subtitle {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .main__intro-title {
+    font-size: 76px;
+    line-height: 88px;
+  }
+
+  .main__intro-subtitle {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+.intro__buttons {
+  padding-top: 145px;
+  padding-bottom: 122px;
+}
+.intro__buttons-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.intro__button {
+  padding: 29px 0;
+  border-radius: 100px;
+}
+.intro__button span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 48px;
+}
+.intro__button-first {
+  padding-left: 33px;
+}
+.intro__button-first span {
+  padding-left: 84px;
+  padding-right: 117px;
+  background: url(../img/icons/srart-in-it-button-icon.svg) left no-repeat;
+}
+.intro__button-second {
+  padding-left: 26px;
+}
+.intro__button-second span {
+  padding-left: 84px;
+  padding-right: 84px;
+  background: url(../img/icons/i-have-experience-button-icon.svg) left no-repeat;
+}
+.intro__button-third {
+  padding-left: 39px;
+}
+.intro__button-third span {
+  padding-left: 91px;
+  padding-right: 92px;
+  background: url(../img/icons/open-vacancies-button-icon.svg) left no-repeat;
+}
+
+/*==============================@media request==============================*/
+@media (max-width: 1200px) {
+  .intro__button {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .intro__button-first {
+    padding-left: 23px;
+  }
+  .intro__button-first span {
+    padding-left: 74px;
+    padding-right: 107px;
+  }
+  .intro__button-second {
+    padding-left: 16px;
+  }
+  .intro__button-second span {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  .intro__button-third {
+    padding-left: 29px;
+  }
+  .intro__button-third span {
+    padding-left: 81px;
+    padding-right: 82px;
+  }
+}
+@media (max-width: 992px) {
+  .intro__button span {
+    font-size: 14px;
+  }
+  .intro__button-first {
+    padding-left: 23px;
+  }
+  .intro__button-first span {
+    padding-left: 64px;
+    padding-right: 77px;
+  }
+  .intro__button-second {
+    padding-left: 16px;
+  }
+  .intro__button-second span {
+    padding-left: 64px;
+    padding-right: 44px;
+  }
+  .intro__button-third {
+    padding-left: 19px;
+  }
+  .intro__button-third span {
+    padding-left: 71px;
+    padding-right: 52px;
+  }
+}
+@media (max-width: 768px) {
+  .intro__button span {
+    font-size: 12px;
+  }
+  .intro__button-first {
+    padding-left: 23px;
+  }
+  .intro__button-first span {
+    padding-left: 54px;
+    padding-right: 42px;
+  }
+  .intro__button-second {
+    padding-left: 16px;
+  }
+  .intro__button-second span {
+    padding-left: 44px;
+    padding-right: 9px;
+  }
+  .intro__button-third {
+    padding-left: 19px;
+  }
+  .intro__button-third span {
+    padding-left: 51px;
+    padding-right: 17px;
+  }
+}
+@media (max-width: 576px) {
+  .intro__buttons {
+    padding-top: 45px;
+    padding-bottom: 22px;
+  }
+  .intro__buttons-wrapper {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .intro__button {
+    display: inline-block;
+    width: 90%;
+    margin: 15px;
+    text-align: center;
   }
 }
