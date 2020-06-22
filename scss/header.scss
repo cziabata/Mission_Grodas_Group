@@ -44,9 +44,11 @@
     font-family: 'Open Sans';
     background-color: $btn_color;
     color: $btn_text-color;
+    text-transform: uppercase;
+    font-size: 18px;
     transition: 0.2s;
     &:hover {
-        background-color: #37474F;
+        background-color: $btn_dark-color;
     }
 }
 .header-btn {

@@ -52,10 +52,12 @@ body {
   font-family: "Open Sans";
   background-color: #39A9CD;
   color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
   transition: 0.2s;
 }
 .btn:hover {
-  background-color: #37474F;
+  background-color: #1E3649;
 }
 
 .header-btn {
@@ -164,6 +166,7 @@ body {
 }
 .main__intro {
   background: url(../img/background-city.jpg) center center no-repeat;
+  background-size: cover;
   z-index: 1;
   position: relative;
   font-family: Muli;
@@ -253,9 +256,7 @@ body {
 }
 .intro__button span {
   display: inline-block;
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 18px;
   line-height: 48px;
 }
 .intro__button-first {
@@ -379,4 +380,83 @@ body {
     margin: 15px;
     text-align: center;
   }
+}
+.main-content__first-part {
+  padding: 77px 10% 100px 9%;
+  background: #F2F3F9;
+}
+.main-content__header {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-family: Muli;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  color: #37474F;
+}
+.main-content__btn {
+  display: inline-block;
+  padding: 29px 60px;
+  border-radius: 100px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: center;
+}
+
+.flex-wrapper {
+  display: flex;
+  transition: 0.2s;
+}
+
+.flex-wrapper__vertical {
+  flex-direction: column;
+}
+
+.content-img {
+  max-width: 100%;
+}
+
+.first-part__img {
+  margin-right: 75px;
+}
+.first-part__text {
+  max-width: 753px;
+}
+.first-part__text p {
+  margin-bottom: 30px;
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 27px;
+  color: #546E7A;
+}
+
+/*==============================@media request==============================*/
+@media (max-width: 1900px) {
+  .flex-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .first-part__text {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .main-content__header {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+.main-content__second-part {
+  padding: 77px 10% 100px 9%;
+  background: #fff;
+}
+
+.second-part__btn {
+  margin-bottom: 30px;
 }
