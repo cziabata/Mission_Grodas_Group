@@ -1,0 +1,25 @@
+.footer {
+    padding-top: 33px;
+    padding-bottom: 15px;
+    background: $btn_dark-color;
+    text-align: center;
+    box-shadow: -1px -9px 12px -9px rgba(57,169,205,1);
+    &-logo__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    &-logo__img {
+        width: 44px;
+        height: 44px;
+    }
+    &-logo__item:not(:first-child) {
+        margin-left: 20px;
+    }
+    &-text {
+        font-family: 'Open Sans';
+        font-size: 13px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+}

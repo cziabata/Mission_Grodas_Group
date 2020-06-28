@@ -40,6 +40,9 @@
         }
     }
 }
+.button-link {
+    color: #fff;
+}
 .btn {
     font-family: 'Open Sans';
     background-color: $btn_color;
@@ -49,16 +52,20 @@
     transition: 0.2s;
     &:hover {
         background-color: $btn_dark-color;
+        box-shadow: 0px 1px 15px 7px rgba(57,169,205,1);
     }
 }
 .header-btn {
-    margin: 0 30px;
+    display: inline-block;
     padding: 9px 25px;
+    border-radius: 20px;
+}
+.header-btn__wrapper {
+    margin: 0 30px;
     font-style: normal;
     font-weight: 800;
     font-size: 13px;
     line-height: 18px;
-    text-align: center;
     border-radius: 20px;
 }
 .nav-menu__burger {
@@ -78,7 +85,6 @@
     transition: 0.1s;
 }
 .overlay-btn {
-    margin-left: 25px;
     margin-top: 20px;
 }
 .overlay-item {

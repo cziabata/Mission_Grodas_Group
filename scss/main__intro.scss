@@ -32,14 +32,16 @@
         margin-bottom: 188px;
     }
     &-btn {
+        display: inline-block;
+        padding: 18px 45px;
+    }
+    &-btn-wrapper {
         margin-bottom: 120px;
         font-family: 'Open Sans';
-        font-style: normal;
         font-weight: 600;
         font-size: 13px;
         line-height: 18px;
         text-transform: uppercase;
-        padding: 18px 45px;
         border-radius: 20px;
     }
     &-wrapper {
